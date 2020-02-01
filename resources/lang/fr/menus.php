@@ -44,6 +44,7 @@ return [
 
         'sidebar' => [
             'dashboard' => 'Tableau de bord',
+            'page' => 'Pages du site',
             'general' => 'Général',
             'history' => 'History',
             'system' => 'Système',

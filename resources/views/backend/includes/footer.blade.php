@@ -1,11 +1,7 @@
 <footer class="app-footer">
     <div>
-        <strong>@lang('labels.general.copyright') &copy; {{ date('Y') }}
-            <a href="http://laravel-boilerplate.com">
-                @lang('strings.backend.general.boilerplate_link')
-            </a>
-        </strong> @lang('strings.backend.general.all_rights_reserved')
+        Créé avec ♡ par Margot & Paulin
     </div>
 
-    <div class="ml-auto">Theme by <a href="http://coreui.io">CoreUI</a></div>
+    <div class="ml-auto">Une question, un problème ? Contactez <span class="text-info">aidez-moi@lefarfelu.fr</span></div>
 </footer>

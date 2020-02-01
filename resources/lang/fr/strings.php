@@ -26,6 +26,10 @@ return [
             'welcome' => 'Bienvenue',
         ],
 
+        'page' => [
+            'list' => 'Pages du site',
+        ],
+
         'general' => [
             'all_rights_reserved' => 'Tous droits réservés.',
             'are_you_sure' => 'Êtes-vous sûr ?',

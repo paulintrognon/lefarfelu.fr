@@ -8,11 +8,11 @@
             <div class="card">
                 <div class="card-header">
                     <strong>@lang('strings.backend.dashboard.welcome') {{ $logged_in_user->name }}!</strong>
-                </div><!--card-header-->
+                </div>
                 <div class="card-body">
                     {!! __('strings.backend.welcome') !!}
-                </div><!--card-body-->
-            </div><!--card-->
-        </div><!--col-->
-    </div><!--row-->
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
