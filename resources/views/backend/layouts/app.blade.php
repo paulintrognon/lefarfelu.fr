@@ -79,6 +79,7 @@
     {!! script(mix('js/manifest.js')) !!}
     {!! script(mix('js/vendor.js')) !!}
     {!! script(mix('js/backend.js')) !!}
+    {!! script('vendor/tinymce/tinymce.min.js') !!}
     @stack('after-scripts')
 </body>
 </html>
