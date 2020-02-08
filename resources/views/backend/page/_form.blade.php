@@ -80,6 +80,13 @@ $(function () {
         ],
         toolbar: 'undo redo | styleselect | bold italic | forecolor | backcolor | alignleft aligncenter alignright alignjustify |' +
       ' bullist numlist | table | link image media emoticons | help',
+        color_map: [
+            "3d2a23", "Black",
+            "4f82c1", "Bleu",
+            "53b18f", "Vert",
+            "e69845", "Orange",
+            "ffffff", "Blanc",
+        ],
     });
 });
 </script>
