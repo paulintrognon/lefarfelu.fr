@@ -44,8 +44,11 @@ $(function () {
         content_css: '/css/frontend.css',
         formats: {
             // Changes the default format for h1 to have a class of heading
-            h1: { block: 'h1', classes: 'PageContent-title' },
+            // button: { block: 'a', classes: ['button', 'is-primary']},
         },
+        style_formats: [
+            // { title: 'Bouton', format: 'button' },
+        ],
         images_upload_handler: function (blobInfo, success, failure) {
             var xhr = new XMLHttpRequest();
             xhr.withCredentials = false;

@@ -29,7 +29,7 @@
         </td>
         <td>
             <a href="{{ route('admin.page.edit', $page) }}">
-                edit
+                <i class="fas fa-edit"></i> Modifier
             </a>
         </td>
     </tr>    
