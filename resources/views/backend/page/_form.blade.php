@@ -25,7 +25,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('content', 'Contenu de la page') }}
-            {{ Form::textarea('content', null, ['class' => 'form-control', 'rows' => 30]) }}
+            {{ Form::textarea('content', null, ['class' => 'form-control content', 'rows' => 30]) }}
             {!! $errors->first('content', '<span class="text-danger">:message</span>') !!}
         </div>
     </div>
@@ -41,6 +41,11 @@ $(function () {
         selector:'#content',
         language: 'fr_FR',
         file_picker_types: 'image media',
+        content_css: '/css/frontend.css',
+        formats: {
+            // Changes the default format for h1 to have a class of heading
+            h1: { block: 'h1', classes: 'PageContent-title' },
+        },
         images_upload_handler: function (blobInfo, success, failure) {
             var xhr = new XMLHttpRequest();
             xhr.withCredentials = false;

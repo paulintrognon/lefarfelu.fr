@@ -1,13 +1,36 @@
 @import "../global";
 
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// Bootstrap Overrides
 @import 'variables';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import '../bulma/bulma.sass';
 
-// Pages
-@import 'pages/dashboard';
+h1 {
+    font-family: $family-secondary;
+    font-size: 58px;
+    line-height: 68px;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: $family-secondary;
+    font-size: 38px;
+    line-height: 48px;
+    font-weight: 700;
+    letter-spacing: 0px;
+}
+
+h3 {
+    font-family: $family-secondary;
+    font-size: 25px;
+    line-height: 29px;
+    font-weight: 600;
+    letter-spacing: 0px;
+}
+
+h4 {
+    font-family: $family-secondary;
+    font-size: 21px;
+    line-height: 25px;
+    font-weight: 700;
+    letter-spacing: 0px;
+}
