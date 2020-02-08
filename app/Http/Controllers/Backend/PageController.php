@@ -49,4 +49,31 @@ class PageController extends Controller
             ->route('admin.page.list')
             ->withFlashSuccess('La page a été créée avec succès !');
     }
+
+    /**
+     * Show form for editing an existing page
+     * @return \Illuminate\View\View
+     */
+    public function edit(Page $page)
+    {
+        return view('backend.page.edit', [
+            'page' => $page,
+        ]);
+    }
+
+    /**
+     * Update the page in the database
+     */
+    public function update(Page $page, StorePageRequest $request)
+    {
+        $user = auth()->guard('web')->user();
+        $page->update([
+            'title' => $request->title,
+            'urlPath' => $request->urlPath,
+            'content' => $request->content,
+        ]);
+        return redirect()
+            ->route('admin.page.list')
+            ->withFlashSuccess('La page a été modifiée avec succès !');
+    }
 }

@@ -12,6 +12,7 @@
         <th>ID</th>
         <th>Titre</th>
         <th>URL</th>
+        <th>Actions</th>
     </tr>
     @foreach ($pages as $page)
     <tr>
@@ -24,6 +25,11 @@
         <td>
             <a href="{{ $page->publicUrl() }}" target="_blank">
                 {{ $page->publicUrl() }}
+            </a>
+        </td>
+        <td>
+            <a href="{{ route('admin.page.edit', $page) }}">
+                edit
             </a>
         </td>
     </tr>    

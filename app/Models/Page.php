@@ -30,6 +30,18 @@ class Page extends Model
 
     public function publicUrl()
     {
-        return config('app.url').'/'.$this->urlPath;
+        return config('app.url').$this->urlPath;
+    }
+
+    public function html()
+    {
+        return $this->content;
+    }
+
+    // STATIC HELPERS
+
+    public static function getFromPath(string $path)
+    {
+        return self::where('urlPath', '=', $path)->first();
     }
 }
