@@ -22,9 +22,8 @@
         @stack('after-styles')
     </head>
     <body>
-        @include('includes.partials.read-only')
-
         <div id="app">
+            @include('frontend.includes.header')
             <section class="section">
                 <div class="container">
                     @include('includes.partials.messages')

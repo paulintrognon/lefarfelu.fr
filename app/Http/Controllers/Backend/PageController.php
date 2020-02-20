@@ -73,7 +73,7 @@ class PageController extends Controller
             'content' => $request->content,
         ]);
         return redirect()
-            ->route('admin.page.list')
+            ->route('admin.page.edit', $page)
             ->withFlashSuccess('La page a été modifiée avec succès !');
     }
 }

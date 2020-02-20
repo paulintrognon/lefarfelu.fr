@@ -1,0 +1,58 @@
+h1 {
+    font-family: $family-secondary;
+    font-size: $size-1;
+    font-weight: $weight-bold;
+
+    @media (max-width: $tablet) {
+        font-size: $size-3;
+    }
+}
+
+h2 {
+    font-family: $family-secondary;
+    font-size: $size-2;
+    font-weight: $weight-bold;
+
+    @media (max-width: $tablet) {
+        font-size: $size-4;
+    }
+}
+
+h3 {
+    font-family: $family-secondary;
+    font-size: $size-3;
+    font-weight: $weight-semibold;
+
+    @media (max-width: $tablet) {
+        font-size: $size-5;
+    }
+}
+
+h4 {
+    font-family: $family-secondary;
+    font-size: $size-4;
+    font-weight: $weight-bold;
+
+    @media (max-width: $tablet) {
+        font-size: $size-6;
+    }
+}
+
+h5 {
+    font-size: $size-5;
+    font-weight: $weight-bold;
+
+    @media (max-width: $tablet) {
+        font-weight: $weight-semibold;
+        font-size: $size-6;
+    }
+}
+
+h6 {
+    font-size: $size-6;
+    font-weight: $weight-medium;
+
+    @media (max-width: $tablet) {
+        font-size: $size-6;
+    }
+}

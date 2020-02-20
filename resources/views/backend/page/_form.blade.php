@@ -30,9 +30,6 @@
         </div>
     </div>
 </div>
-<p>
-    <input class="btn btn-success" type="submit" value="Créer la page" />
-</p>
 
 @push('after-scripts')
 <script>
@@ -47,7 +44,17 @@ $(function () {
             // button: { block: 'a', classes: ['button', 'is-primary']},
         },
         style_formats: [
-            // { title: 'Bouton', format: 'button' },
+            { title: 'Headings', items: [
+                { title: 'Heading 1', format: 'h1' },
+                { title: 'Heading 2', format: 'h2' },
+                { title: 'Heading 3', format: 'h3' },
+                { title: 'Heading 4', format: 'h4' },
+                { title: 'Heading 5', format: 'h5' },
+                { title: 'Heading 6', format: 'h6' }
+            ]},
+            { title: 'Blocks', items: [
+                { title: 'Paragraph', format: 'p' },
+            ]},
         ],
         images_upload_handler: function (blobInfo, success, failure) {
             var xhr = new XMLHttpRequest();

@@ -70,14 +70,6 @@ class AppServiceProvider extends ServiceProvider
 
         /*
          * The block of code inside this directive indicates
-         * the project is currently running in read only mode.
-         */
-        Blade::if('readonly', function () {
-            return config('app.read_only');
-        });
-
-        /*
-         * The block of code inside this directive indicates
          * the chosen language requests RTL support.
          */
         Blade::if('langrtl', function ($session_identifier = 'lang-rtl') {

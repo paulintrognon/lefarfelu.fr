@@ -65,7 +65,7 @@ return [
             'results' => 'Résultats de la recherche :query',
         ],
 
-        'welcome' => 'Welcome to the Dashboard',
+        'welcome' => 'Bienvenue sur l\'interface de gestion du site du farfelu !',
     ],
 
     'emails' => [

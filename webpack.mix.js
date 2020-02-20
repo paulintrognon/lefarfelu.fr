@@ -18,7 +18,10 @@ mix.setPublicPath('public')
     // })
     .sass('resources/sass/frontend/app.scss', 'css/frontend.css')
     .sass('resources/sass/backend/app.scss', 'css/backend.css')
-    .js('resources/js/frontend/app.js', 'js/frontend.js')
+    .js([
+        'resources/js/frontend/layout/header.js',
+        'resources/js/frontend/app.js'
+    ], 'js/frontend.js')
     .js([
         'resources/js/backend/before.js',
         'resources/js/backend/app.js',
@@ -26,12 +29,8 @@ mix.setPublicPath('public')
     ], 'js/backend.js')
     .extract([
         // Extract packages from node_modules to vendor.js
-        'jquery',
-        'bootstrap',
         'popper.js',
-        'axios',
         'sweetalert2',
-        'lodash',
     ])
     .sourceMaps();
 
