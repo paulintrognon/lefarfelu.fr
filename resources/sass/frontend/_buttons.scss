@@ -1,0 +1,11 @@
+.btn, a.btn {
+    background: $primary;
+    padding: 0.8rem 1.5rem;
+    color: white;
+    transition: background-color 200ms;
+
+    &:hover {
+        background: lighten($primary, 10%);
+        color: white;
+    }
+}

@@ -17,6 +17,7 @@
 
         <!-- Check if the language is set to RTL, so apply the RTL layouts -->
         <!-- Otherwise apply the normal LTR layouts -->
+        {{ style(mix('css/bulma.css')) }}
         {{ style(mix('css/frontend.css')) }}
 
         @stack('after-styles')
@@ -24,12 +25,10 @@
     <body>
         <div id="app">
             @include('frontend.includes.header')
-            <section class="section">
-                <div class="container">
-                    @include('includes.partials.messages')
-                    @yield('content')
-                </div>
-            </section>
+            <div class="container">
+                @include('includes.partials.messages')
+                @yield('content')
+            </div>
         </div>
 
         <!-- Scripts -->

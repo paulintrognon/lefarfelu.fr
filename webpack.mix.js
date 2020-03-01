@@ -16,6 +16,7 @@ mix.setPublicPath('public')
     // .options({
     //     processCssUrls: false,
     // })
+    .sass('resources/sass/frontend/bulma.scss', 'css/bulma.css')
     .sass('resources/sass/frontend/app.scss', 'css/frontend.css')
     .sass('resources/sass/backend/app.scss', 'css/backend.css')
     .js([
@@ -31,8 +32,7 @@ mix.setPublicPath('public')
         // Extract packages from node_modules to vendor.js
         'popper.js',
         'sweetalert2',
-    ])
-    .sourceMaps();
+    ]);
 
 if (mix.inProduction()) {
     mix.version()

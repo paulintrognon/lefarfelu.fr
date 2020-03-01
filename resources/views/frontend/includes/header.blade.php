@@ -14,15 +14,15 @@
 
         <div class="navbar-menu" id="header_navbar_menu">
             <div class="navbar-end">
-                <a class="navbar-item">
+                <a href="#" class="navbar-item">
                     Inscriptions
                 </a>
 
-                <a class="navbar-item">
+                <a href="#" class="navbar-item">
                     Organisation
                 </a>
 
-                <a class="navbar-item">
+                <a href="#" class="navbar-item">
                     <b>Infos Pratiques</b>
                 </a>
             </div>

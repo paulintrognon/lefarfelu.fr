@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\Frontend\PageController;
 
 /*
  * Global Routes
@@ -33,3 +34,6 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'admin.', '
      */
     include_route_files(__DIR__.'/backend/');
 });
+
+// We put that route after all the other files
+Route::get('/{slug}', [PageController::class, 'index'])->name('pages.index');

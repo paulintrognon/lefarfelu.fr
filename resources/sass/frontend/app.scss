@@ -1,9 +1,13 @@
-@import "../global";
+@import '../global';
 
+@import '../bulma/utilities/_all.sass';
 @import 'variables';
-
-@import '../bulma/bulma.sass';
 
 @import './titles';
 
+@import './buttons';
+
 @import './layout/header.scss';
+
+@import './pages/homepage.scss';
+@import './pages/inscriptions.scss';

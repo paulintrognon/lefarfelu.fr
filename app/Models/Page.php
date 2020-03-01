@@ -42,6 +42,7 @@ class Page extends Model
 
     public static function getFromPath(string $path)
     {
-        return self::where('urlPath', '=', $path)->first();
+        return self::where('urlPath', '=', $path)
+            ->orWhere('urlPath', '=', "/$path")->first();
     }
 }
