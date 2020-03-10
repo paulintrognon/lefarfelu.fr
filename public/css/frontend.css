@@ -6258,11 +6258,22 @@ a.btn:hover {
   margin: auto;
 }
 
+.Footer {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.Footer-logo {
+  margin: 2rem 0;
+}
+
 .Homepage-header {
   padding-top: 10rem;
   padding-bottom: 15rem;
   background-image: url("/img/frontend/home-bg.jpg");
   background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 2px;
 }
 
 .Homepage-title {
@@ -6289,6 +6300,19 @@ a.btn:hover {
 
 .Homepage-countdown-text {
   color: #4f82c1;
+}
+
+.Homepage-location {
+  margin: 3rem 0;
+}
+
+.Homepage-weNeedYou {
+  margin: 3rem 0;
+}
+
+.Homepage-weNeedYou-content {
+  max-width: 60rem;
+  margin: 10rem auto;
 }
 
 .Inscriptions-Header {
