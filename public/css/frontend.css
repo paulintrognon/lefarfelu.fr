@@ -6258,6 +6258,10 @@ a.btn:hover {
   margin: auto;
 }
 
+.header .navbar-brand img {
+  max-height: 90px;
+}
+
 .Footer {
   text-align: center;
   margin: 2rem 0;
@@ -6268,12 +6272,18 @@ a.btn:hover {
 }
 
 .Homepage-header {
-  padding-top: 10rem;
-  padding-bottom: 15rem;
+  padding: 5rem 0;
   background-image: url("/img/frontend/home-bg.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   margin-top: 2px;
+}
+
+@media (min-width: 769px) {
+  .Homepage-header {
+    padding-top: 10rem;
+    padding-bottom: 15rem;
+  }
 }
 
 .Homepage-title {
@@ -6282,8 +6292,15 @@ a.btn:hover {
 }
 
 .Homepage-title .PageContent-title {
-  font-size: 4rem;
-  line-height: 4rem;
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+@media (min-width: 769px) {
+  .Homepage-title .PageContent-title {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
 }
 
 .Homepage-countdown {
@@ -6293,9 +6310,16 @@ a.btn:hover {
 }
 
 .Homepage-countdown-number {
-  font-size: 6rem;
-  line-height: 5rem;
+  font-size: 3rem;
+  line-height: 2rem;
   color: #353535;
+}
+
+@media (min-width: 769px) {
+  .Homepage-countdown-number {
+    font-size: 6rem;
+    line-height: 5rem;
+  }
 }
 
 .Homepage-countdown-text {
@@ -6307,17 +6331,40 @@ a.btn:hover {
 }
 
 .Homepage-weNeedYou {
-  margin: 3rem 0;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+@media (min-width: 769px) {
+  .Homepage-weNeedYou {
+    text-align: left;
+    background-image: url("/img/frontend/orga-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-top: -10rem;
+    padding: 20rem 0;
+  }
 }
 
 .Homepage-weNeedYou-content {
   max-width: 60rem;
-  margin: 10rem auto;
+  margin: 0rem auto;
+  padding: 1rem;
 }
 
 .Inscriptions-Header {
   padding: 15vh 0;
   background-image: url("/img/frontend/inscriptions-bg.jpg");
+}
+
+.Inscriptions-content {
+  max-width: 1366px;
+  margin: auto;
+}
+
+p {
+  line-height: 1.8rem;
 }
 
 

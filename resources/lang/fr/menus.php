@@ -45,6 +45,7 @@ return [
         'sidebar' => [
             'dashboard' => 'Tableau de bord',
             'page' => 'Pages du site',
+            'file' => 'Fichiers',
             'general' => 'Général',
             'history' => 'History',
             'system' => 'Système',

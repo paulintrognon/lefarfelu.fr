@@ -1,8 +1,8 @@
 <header class="header">
-    <nav class="header_nav navbar is-spaced" role="navigation" aria-label="main navigation">
+    <nav class="header_nav navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="/">
-                LeFarfelu.fr
+                <img src="/img/frontend/logo-one-line.png" alt="lefarfelu.fr" />
             </a>
 
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="header_navbar_menu">

@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\UploadedFile;
 
 /**
  * Class Media
@@ -52,4 +53,23 @@ class Media extends Model
         return false;
     }
 
+    // STATIC HELPERS
+
+    public static function saveFromUpload(UploadedFile $file)
+    {
+        $path = $file->store('media');
+        $media = new Media([
+            'original_file_name' => $file->getClientOriginalName(),
+            'stored_file_name' => $file->hashName(),
+            'extension' => $file->extension() || $file->clientExtension(),
+            'size' => $file->getSize(),
+            'local_path' => $path,
+        ]);
+
+        $user = auth()->guard('web')->user();
+        $media->user()->associate($user);
+
+        $media->save();
+        return $media;
+    }
 }

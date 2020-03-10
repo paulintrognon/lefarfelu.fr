@@ -13,20 +13,7 @@ class MediaController extends Controller
 {
     public function tinymce_upload(Request $request)
     {
-        $mediaFile = $request->file;
-        $path = $mediaFile->store('media');
-        $media = new Media([
-            'original_file_name' => $mediaFile->getClientOriginalName(),
-            'stored_file_name' => $mediaFile->hashName(),
-            'extension' => $mediaFile->extension() || $mediaFile->clientExtension(),
-            'size' => $mediaFile->getSize(),
-            'local_path' => $path,
-        ]);
-
-        $user = auth()->guard('web')->user();
-        $media->user()->associate($user);
-
-        $media->save();
+        $media = Media::saveFromUpload($request->file);
 
         return ['location' => $media->publicUrl()];
     }
