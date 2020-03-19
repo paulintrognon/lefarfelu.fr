@@ -12,6 +12,7 @@
         <th>ID</th>
         <th>Nom du fichier</th>
         <th>URL</th>
+        <th>Date</th>
         <th>Actions</th>
     </tr>
     @foreach ($files as $file)
@@ -23,18 +24,16 @@
             {{ $file->media->original_file_name }}
         </td>
         <td>
-            <a href="{{ $file->media->publicUrl() }}" target="_blank">
-                {{ $file->media->publicUrl() }}
+            <a href="{{ $file->media->downloadUrl() }}" target="_blank">
+                {{ $file->media->downloadUrl() }}
             </a>
         </td>
         <td>
+            {{ $file->created_at->format('d/m/Y - H:i') }}
+        </td>
+        <td>
             <div class="buttons has-addons">
-                <a href="{{ route('admin.file.edit', $file) }}">
-                    <i class="fas fa-edit"></i>
-                    Modifier
-                </a>
-                -
-                <a href="{{ route('admin.file.delete', $file) }}">
+                <a href="{{ route('admin.file.delete', $file) }}" onclick="return confirm('Confirmer la suppression de {{ addslashes($file->media->original_file_name) }} ?')">
                     <i class="fas fa-trash"></i>
                     Supprimer
                 </a>

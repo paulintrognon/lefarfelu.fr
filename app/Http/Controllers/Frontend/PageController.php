@@ -20,6 +20,7 @@ class PageController extends Controller
             abort(404);
         }
         return view('frontend.index', [
+            'title' => $page->title,
             'content' => $page->html(),
         ]);
     }

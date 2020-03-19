@@ -14,7 +14,7 @@
 
         <div class="navbar-menu" id="header_navbar_menu">
             <div class="navbar-end">
-                <a href="#" class="navbar-item">
+                <a href="/inscriptions-2020" class="navbar-item">
                     Inscriptions
                 </a>
 
@@ -22,7 +22,7 @@
                     Organisation
                 </a>
 
-                <a href="#" class="navbar-item">
+                <a href="/inscriptions-2020#informations-pratiques" class="navbar-item">
                     <b>Infos Pratiques</b>
                 </a>
             </div>

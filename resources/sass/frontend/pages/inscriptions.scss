@@ -6,4 +6,22 @@
 .Inscriptions-content {
     max-width: 1366px;
     margin: auto;
+    padding: 0 1rem;
+}
+
+.Inscriptions-camping-left {
+    background-image: url('/img/frontend/guy.jpg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+
+    @media (min-width: $desktop) {
+        display: block;
+    }
+}
+
+.Inscriptions-camping-informationsComplementaires {
+    max-width: 900px;
+    margin: auto;
 }

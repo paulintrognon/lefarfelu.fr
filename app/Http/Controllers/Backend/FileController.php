@@ -18,7 +18,7 @@ class FileController extends Controller
      */
     public function list()
     {
-        $files = File::all();
+        $files = File::latest()->get();
         return view('backend.file.list', [
             'files' => $files,
         ]);

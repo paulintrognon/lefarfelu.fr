@@ -88,7 +88,7 @@ $(function () {
         'wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
         'table emoticons template paste help textcolor'
         ],
-        toolbar: 'undo redo | styleselect | bold italic | forecolor | backcolor | alignleft aligncenter alignright alignjustify |' +
+        toolbar: 'undo redo | styleselect | bold italic underline | forecolor | backcolor | alignleft aligncenter alignright alignjustify |' +
       ' bullist numlist | table | link image media emoticons | help',
         color_map: [
             "3d2a23", "Black",

@@ -23,6 +23,6 @@ class MediaController extends Controller
         if (!$attachment) {
             abort(404);
         }
-        return Storage::disk('attachments')->download($attachment->stored_file_name, $attachment->original_file_name);
+        return Storage::disk('media')->download($attachment->stored_file_name, $attachment->original_file_name);
     }
 }
