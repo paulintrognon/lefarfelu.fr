@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Models\Page;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Backend\Page\StorePageRequest;
+use App\Models\PageHistory;
 
 /**
  * Class PageController.
@@ -67,11 +68,23 @@ class PageController extends Controller
     public function update(Page $page, StorePageRequest $request)
     {
         $user = auth()->guard('web')->user();
-        $page->update([
-            'title' => $request->title,
-            'urlPath' => $request->urlPath,
-            'content' => $request->content,
+
+        // Store current page in page history to save it
+        $pageHistory = new PageHistory([
+            'title' => $page->title,
+            'urlPath' => $page->urlPath,
+            'content' => $page->content,
         ]);
+        $pageHistory->editedBy()->associate($page->createdBy);
+        $pageHistory->save();
+
+        // Save new page
+        $page->title = $request->title;
+        $page->urlPath = $request->urlPath;
+        $page->content = $request->content;
+        $page->lastEditBy()->associate($user);
+        $page->save();
+
         return redirect()
             ->route('admin.page.edit', $page)
             ->withFlashSuccess('La page a été modifiée avec succès !');

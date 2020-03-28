@@ -12,6 +12,7 @@
         <th>ID</th>
         <th>Titre</th>
         <th>URL</th>
+        <th>Dernière modification</th>
         <th>Actions</th>
     </tr>
     @foreach ($pages as $page)
@@ -26,6 +27,10 @@
             <a href="{{ $page->publicUrl() }}" target="_blank">
                 {{ $page->publicUrl() }}
             </a>
+        </td>
+        <td>
+            <b>{{ $page->lastEditBy->getFullNameAttribute() }}</b>,
+            le {{ $page->updated_at->format('d/m/Y à H:i:s')}}
         </td>
         <td>
             <a href="{{ route('admin.page.edit', $page) }}">

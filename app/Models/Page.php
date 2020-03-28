@@ -26,6 +26,15 @@ class Page extends Model
         return $this->belongsTo('App\Models\Auth\User');
     }
 
+    /**
+     * Get the user who last edited the page.
+     */
+    public function lastEditBy()
+    {
+        return $this->belongsTo('App\Models\Auth\User');
+    }
+
+
     // HELPERS
 
     public function publicUrl()
