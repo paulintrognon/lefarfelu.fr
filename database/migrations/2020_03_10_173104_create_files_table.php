@@ -20,6 +20,7 @@ class CreateFilesTable extends Migration
 
             $table->foreign('media_id')
                 ->references('id')->on('media')
+                ->onUpdate('cascade')
                 ->onDelete('cascade');
         });
     }

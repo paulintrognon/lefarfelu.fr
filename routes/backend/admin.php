@@ -4,6 +4,7 @@ use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\FileController;
 use App\Http\Controllers\Backend\MediaController;
 use App\Http\Controllers\Backend\PageController;
+use App\Http\Controllers\Backend\PageHistoryController;
 
 // All route names are prefixed with 'admin.'.
 
@@ -16,6 +17,7 @@ Route::get('pages/create', [PageController::class, 'create'])->name('page.create
 Route::post('pages/store', [PageController::class, 'store'])->name('page.store');
 Route::get('pages/{page}/edit', [PageController::class, 'edit'])->name('page.edit');
 Route::post('pages/{page}/update', [PageController::class, 'update'])->name('page.update');
+Route::get('pages/{page}/history', [PageHistoryController::class, 'list'])->name('page.history');
 
 // Fichiers
 Route::get('files', [FileController::class, 'list'])->name('file.list');

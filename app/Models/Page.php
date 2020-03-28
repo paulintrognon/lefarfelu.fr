@@ -34,6 +34,13 @@ class Page extends Model
         return $this->belongsTo('App\Models\Auth\User');
     }
 
+    /**
+     * Get all old versions of the page
+     */
+    public function histories()
+    {
+        return $this->hasMany('App\Models\PageHistory');
+    }
 
     // HELPERS
 

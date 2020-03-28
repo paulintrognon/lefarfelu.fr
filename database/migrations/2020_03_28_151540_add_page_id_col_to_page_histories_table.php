@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddLastEditColToPagesTable extends Migration
+class AddPageIdColToPageHistoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class AddLastEditColToPagesTable extends Migration
      */
     public function up()
     {
-        Schema::table('pages', function (Blueprint $table) {
-            $table->unsignedBigInteger('last_edit_by_id')->nullable();
+        Schema::table('page_histories', function (Blueprint $table) {
+            $table->unsignedBigInteger('page_id');
 
-            $table->foreign('last_edit_by_id')
+            $table->foreign('page_id')
                 ->references('id')
                 ->on('users')
                 ->onUpdate('cascade')
-                ->onDelete('set null');
+                ->onDelete('cascade');
         });
     }
 
@@ -31,9 +31,9 @@ class AddLastEditColToPagesTable extends Migration
      */
     public function down()
     {
-        Schema::table('pages', function (Blueprint $table) {
-            $table->dropForeign('pages_last_edit_by_id_foreign');
-            $table->dropColumn('last_edit_by_id');
+        Schema::table('page_histories', function (Blueprint $table) {
+            $table->dropForeign('page_histories_page_id_foreign');
+            $table->dropColumn('page_id');
         });
     }
 }

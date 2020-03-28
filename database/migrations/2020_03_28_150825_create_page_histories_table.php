@@ -21,7 +21,11 @@ class CreatePageHistoriesTable extends Migration
             $table->text('content');
             $table->timestamps();
 
-            $table->foreign('edited_by_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('edited_by_id')
+                ->references('id')
+                ->on('users')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
         });
     }
 

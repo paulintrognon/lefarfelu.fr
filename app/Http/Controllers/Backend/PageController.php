@@ -75,7 +75,8 @@ class PageController extends Controller
             'urlPath' => $page->urlPath,
             'content' => $page->content,
         ]);
-        $pageHistory->editedBy()->associate($page->createdBy);
+        $pageHistory->editedBy()->associate($page->lastEditBy);
+        $pageHistory->page()->associate($page);
         $pageHistory->save();
 
         // Save new page

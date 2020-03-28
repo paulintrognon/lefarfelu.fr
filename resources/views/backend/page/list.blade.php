@@ -31,6 +31,11 @@
         <td>
             <b>{{ $page->lastEditBy->getFullNameAttribute() }}</b>,
             le {{ $page->updated_at->format('d/m/Y à H:i:s')}}
+            · 
+            <a href="{{ route('admin.page.history', $page) }}" title="Restaurer une ancienne version">
+                <i class="fas fa-history"></i>
+                Restaurer
+            </a>
         </td>
         <td>
             <a href="{{ route('admin.page.edit', $page) }}">

@@ -16,6 +16,10 @@ Breadcrumbs::for('admin.page.edit', function ($trail) {
     $trail->push(__('strings.backend.page.list'), route('admin.page.list'));
     $trail->push('Modifier la page');
 });
+Breadcrumbs::for('admin.page.history', function ($trail) {
+    $trail->push(__('strings.backend.page.list'), route('admin.page.list'));
+    $trail->push('Histoire de la page');
+});
 
 // FICHIERS
 Breadcrumbs::for('admin.file.list', function ($trail) {
