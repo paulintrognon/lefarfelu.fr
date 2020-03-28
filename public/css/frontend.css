@@ -6273,9 +6273,9 @@ a.btn:hover {
 
 .Homepage-header {
   padding: 5rem 0;
-  background-image: url("/img/frontend/home-bg.jpg");
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: right top;
   margin-top: 2px;
 }
 
@@ -6283,6 +6283,7 @@ a.btn:hover {
   .Homepage-header {
     padding-top: 10rem;
     padding-bottom: 15rem;
+    background-image: url("/img/frontend/home-bg.jpg");
   }
 }
 
@@ -6340,22 +6341,33 @@ a.btn:hover {
   .Homepage-weNeedYou {
     text-align: left;
     background-image: url("/img/frontend/orga-bg.jpg");
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
     margin-top: -10rem;
     padding: 20rem 0;
+    margin-bottom: -5rem;
   }
 }
 
 .Homepage-weNeedYou-content {
   max-width: 60rem;
   margin: 0rem auto;
-  padding: 1rem;
+}
+
+@media (min-width: 769px) {
+  .Homepage-weNeedYou-content {
+    padding-left: 10rem;
+    padding-bottom: 15rem;
+  }
 }
 
 .Inscriptions-Header {
-  padding: 15vh 0;
+  padding: 25vh 0;
   background-image: url("/img/frontend/inscriptions-bg.jpg");
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .Inscriptions-content {

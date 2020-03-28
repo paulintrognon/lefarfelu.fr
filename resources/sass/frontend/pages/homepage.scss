@@ -1,13 +1,14 @@
 .Homepage-header {
     padding: 5rem 0;
-    background-image: url('/img/frontend/home-bg.jpg');
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: right top;
     margin-top: 2px;
 
     @media (min-width: $tablet) {
         padding-top: 10rem;
         padding-bottom: 15rem;
+        background-image: url('/img/frontend/home-bg.jpg');
     }
 }
 
@@ -59,15 +60,21 @@
     @media (min-width: $tablet) {
         text-align: left;
         background-image: url('/img/frontend/orga-bg.jpg');
-        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
         background-position: center;
         margin-top: -10rem;
         padding: 20rem 0;
+        margin-bottom: -5rem;
     }
 }
 
 .Homepage-weNeedYou-content {
     max-width: 60rem;
     margin: 0rem auto;
-    padding: 1rem;
+
+    @media (min-width: $tablet) {
+        padding-left: 10rem;
+        padding-bottom: 15rem;
+    }
 }
