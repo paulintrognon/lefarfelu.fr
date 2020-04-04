@@ -1,0 +1,87 @@
+.LoginPage {
+    padding-top: 2rem;
+    text-align: center;
+    background-image: url('/img/star-bg.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet) {
+        padding-top: 5rem;
+        font-size: 1.1rem;
+    }
+    min-height: 100vh;
+}
+
+.LoginPage-messages {
+    max-width: 35rem;
+    margin: auto;
+}
+
+.LoginPage-logo {
+    width: 100px;
+
+    @media (min-width: $tablet) {
+        width: 250px;
+    }
+}
+
+.LoginPage-text {
+    margin: 1rem 0;
+
+    .-blue {
+        color: $primary;
+    }
+}
+
+.LoginPage-form-input-container {
+    margin: 2rem 0;
+}
+.LoginPage-form-input {
+    background-color: #EEE;
+    color: $primary;
+    border: none;
+    padding: 0.8rem 1.3rem;
+    width: 20rem;
+    font-size: 1.1rem;
+
+    &::placeholder {
+        color: darken($primary, 10%);
+    }
+}
+
+.LoginPage-form-submit-container {
+    margin: 2rem 0;
+}
+.LoginPage-form-submit {
+    color: white;
+    background-color: $primary;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.LoginPage-form-forgotPassword {
+    margin: 1rem 0;
+    color: $primary;
+
+    em {
+        font-style: normal;
+        text-decoration: underline;
+    }
+}
+
+.LoginPage-adminLink {
+    margin-top: 3rem;
+
+    @media (min-width: $tablet) {
+        bottom: 2rem;
+        position: absolute;
+        right: 2rem;
+    }
+
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+}

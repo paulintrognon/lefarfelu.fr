@@ -6249,6 +6249,12 @@ a.btn:hover {
   color: white;
 }
 
+.BlackLink {
+  color: black;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .header {
   box-shadow: 0 2px 0 0 whitesmoke;
 }
@@ -6269,6 +6275,118 @@ a.btn:hover {
 
 .Footer-logo {
   margin: 2rem 0;
+}
+
+.LoginPage {
+  padding-top: 2rem;
+  text-align: center;
+  background-image: url("/img/star-bg.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+@media (min-width: 769px) {
+  .LoginPage {
+    padding-top: 5rem;
+    font-size: 1.1rem;
+  }
+}
+
+.LoginPage-messages {
+  max-width: 35rem;
+  margin: auto;
+}
+
+.LoginPage-logo {
+  width: 100px;
+}
+
+@media (min-width: 769px) {
+  .LoginPage-logo {
+    width: 250px;
+  }
+}
+
+.LoginPage-text {
+  margin: 1rem 0;
+}
+
+.LoginPage-text .-blue {
+  color: #4f82c1;
+}
+
+.LoginPage-form-input-container {
+  margin: 2rem 0;
+}
+
+.LoginPage-form-input {
+  background-color: #EEE;
+  color: #4f82c1;
+  border: none;
+  padding: 0.8rem 1.3rem;
+  width: 20rem;
+  font-size: 1.1rem;
+}
+
+.LoginPage-form-input::-webkit-input-placeholder {
+  color: #3a69a3;
+}
+
+.LoginPage-form-input::-moz-placeholder {
+  color: #3a69a3;
+}
+
+.LoginPage-form-input:-ms-input-placeholder {
+  color: #3a69a3;
+}
+
+.LoginPage-form-input::-ms-input-placeholder {
+  color: #3a69a3;
+}
+
+.LoginPage-form-input::placeholder {
+  color: #3a69a3;
+}
+
+.LoginPage-form-submit-container {
+  margin: 2rem 0;
+}
+
+.LoginPage-form-submit {
+  color: white;
+  background-color: #4f82c1;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.LoginPage-form-forgotPassword {
+  margin: 1rem 0;
+  color: #4f82c1;
+}
+
+.LoginPage-form-forgotPassword em {
+  font-style: normal;
+  text-decoration: underline;
+}
+
+.LoginPage-adminLink {
+  margin-top: 3rem;
+}
+
+@media (min-width: 769px) {
+  .LoginPage-adminLink {
+    bottom: 2rem;
+    position: absolute;
+    right: 2rem;
+  }
+}
+
+.LoginPage-adminLink a {
+  color: black;
+  text-decoration: underline;
 }
 
 .Homepage-header {

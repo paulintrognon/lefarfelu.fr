@@ -15,7 +15,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $page = Page::getFromPath('/');
+        $page = Page::getFromPath('');
         return view('frontend.home', [
             'content' => $page->html(),
         ]);

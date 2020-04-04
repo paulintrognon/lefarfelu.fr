@@ -36,6 +36,14 @@ class LoginController extends Controller
     }
 
     /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function showAdminLoginForm()
+    {
+        return view('frontend.auth.admin');
+    }
+
+    /**
      * Get the login username to be used by the controller.
      *
      * @return string

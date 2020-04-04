@@ -7,10 +7,13 @@
     </div>
     <div class="LoginPage-text">
         <p class="-blue">
-            Faites chauffer les méninges,
+            Connectez-vous à l'espace <b>administrateur</b> du site internet du Farfelu&nbsp;!
         </p>
         <p>
-            c'est le moment d'entrer le mot de passe du Farfelu pour accéder au site !
+            Vous souhaitez accéder à l'espace <b>utilisateur</b>&nbsp;?
+            <a href="{{ route('frontend.auth.login') }}" class="BlackLink">
+                Cliquer ici.
+            </a>
         </p>
     </div>
     <div class="LoginPage-messages">
@@ -18,9 +21,11 @@
     </div>
     <div class="LoginPage-form">
         <form action="{{ route('frontend.auth.login.post') }}" method="POST">
-            <input type="hidden" name="email" value="paulintrognon+farfelu@gmail.com" />
-            <input type="hidden" name="remember" value="1" />
             @csrf
+            <input type="hidden" name="remember" value="1" />
+            <div class="LoginPage-form-input-container">
+                <input type="email" name="email" required placeholder="Entrez l'adresse email admin" class="LoginPage-form-input" />
+            </div>
             <div class="LoginPage-form-input-container">
                 <input type="password" name="password" required placeholder="Entrez le mot de passe" class="LoginPage-form-input" />
             </div>
@@ -28,15 +33,9 @@
                 <button class="LoginPage-form-submit" type="submit">C'est parti !</button>
             </div>
             <p class="LoginPage-form-forgotPassword">
-                Mot de passe oublié&nbsp;? Contactez <em>aidez-moi@lefarfelu.fr</em>
+                Problème de connexion&nbsp;? Contactez <em>aidez-moi@lefarfelu.fr</em>
             </p>
         </form>
-    </div>
-    <div class="LoginPage-adminLink">
-        Vous êtes administrateur ?
-        <a href="{{ route('frontend.auth.login.admin') }}">
-            Cliquez ici.
-        </a>
     </div>
 </div>
 @endsection

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\PageController;
 
 /*
@@ -35,5 +36,10 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'admin.', '
     include_route_files(__DIR__.'/backend/');
 });
 
-// We put that route after all the other files
-Route::get('/{slug}', [PageController::class, 'index'])->name('pages.index');
+/**
+ * Page CMS group
+ */
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/', [HomeController::class, 'index'])->name('frontend.index');
+    Route::get('/{slug}', [PageController::class, 'index'])->name('pages.index');
+});

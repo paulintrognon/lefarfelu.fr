@@ -45,6 +45,7 @@ class PageController extends Controller
             'content' => $request->content,
         ]);
         $page->createdBy()->associate($user);
+        $page->lastEditBy()->associate($user);
         $page->save();
         return redirect()
             ->route('admin.page.list')

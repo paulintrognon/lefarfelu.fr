@@ -34,7 +34,8 @@
             {{ $history->created_at->format('d/m/Y à H:i:s')}}
         </td>
         <td>
-            <a href="{{ route('admin.page.history', $history) }}" onclick="return confirm('sûr ?')">
+            {{-- <a href="{{ route('admin.page.history', $history) }}" onclick="return confirm('Êtes-vous sûr de vouloir restaurer cette version ?')"> --}}
+            <a href="#" onclick="alert('Fonctionnalité pas encore disponible')">
                 <i class="fas fa-history"></i> Restaurer
             </a>
         </td>

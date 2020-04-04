@@ -46,7 +46,7 @@ class Page extends Model
 
     public function publicUrl()
     {
-        return config('app.url').$this->urlPath;
+        return config('app.url').'/'.$this->urlPath;
     }
 
     public function html()

@@ -72,8 +72,14 @@ class Handler extends ExceptionHandler
      */
     protected function unauthenticated($request, AuthenticationException $exception)
     {
-        return $request->expectsJson()
-            ? response()->json(['message' => 'Unauthenticated.'], 401)
-            : redirect()->guest(route('frontend.auth.login'));
+        if ($request->expectsJson()) {
+            return response()->json(['message' => 'Unauthenticated.'], 401);
+        }
+
+        // If access to admin is wanted
+        if (substr($request->path(), 0, 5) === 'admin') {
+            return redirect()->guest(route('frontend.auth.login.admin'));
+        }
+        return redirect()->guest(route('frontend.auth.login'));
     }
 }
