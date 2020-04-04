@@ -3,7 +3,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="#">
-        <img src="/img/logo-one-line.png" alt="lefarfelu.fr" height="40" />
+        <img src="/img/logo-one-line2.png" alt="lefarfelu.fr" height="40" />
         <img class="navbar-brand-minimized" src="/img/logo.png" alt="lefarfelu.fr" height="30" />
     </a>
     <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
@@ -14,7 +14,7 @@
         <li class="nav-item px-3">
             <a class="nav-link" href="{{ route('frontend.index') }}" target="_blank">
                 <i class="fas fa-home"></i>
-                Accès au site
+                Voir le site
             </a>
         </li>
     </ul>
