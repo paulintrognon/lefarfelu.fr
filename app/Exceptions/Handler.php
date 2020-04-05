@@ -4,6 +4,7 @@ namespace App\Exceptions;
 
 use Exception;
 use Illuminate\Auth\AuthenticationException;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Spatie\Permission\Exceptions\UnauthorizedException;
 
@@ -55,13 +56,18 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        if ($exception instanceof UnauthorizedException) {
-            return redirect()
-                ->route(home_route())
-                ->withFlashDanger(__('auth.general_error'));
+        if (!$exception instanceof UnauthorizedException) {
+            return parent::render($request, $exception);
         }
 
-        return parent::render($request, $exception);
+        if ($this->isAdminRequest($request)) {
+            auth()->logout();
+            return redirect()->route('frontend.auth.login.admin');
+        }
+
+        return redirect()
+            ->route(home_route())
+            ->withFlashDanger(__('auth.general_error'));
     }
 
     /**
@@ -77,9 +83,19 @@ class Handler extends ExceptionHandler
         }
 
         // If access to admin is wanted
-        if (substr($request->path(), 0, 5) === 'admin') {
+        if ($this->isAdminRequest($request)) {
             return redirect()->guest(route('frontend.auth.login.admin'));
         }
         return redirect()->guest(route('frontend.auth.login'));
+    }
+
+    /**
+     * @param \Illuminate\Http\Request $request
+     * 
+     * @return boolean
+     */
+    private function isAdminRequest(Request $request)
+    {
+        return substr($request->path(), 0, 5) === 'admin';
     }
 }

@@ -10,3 +10,7 @@
 .header .navbar-brand img {
     max-height: 90px;
 }
+
+.header a.navbar-item:hover {
+    background-color: unset;
+}

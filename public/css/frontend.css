@@ -6268,6 +6268,10 @@ a.btn:hover {
   max-height: 90px;
 }
 
+.header a.navbar-item:hover {
+  background-color: unset;
+}
+
 .Footer {
   text-align: center;
   margin: 2rem 0;
