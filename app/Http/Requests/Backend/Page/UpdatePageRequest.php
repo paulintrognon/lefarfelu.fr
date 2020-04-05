@@ -4,7 +4,7 @@ namespace App\Http\Requests\Backend\Page;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StorePageRequest extends FormRequest
+class UpdatePageRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,7 +26,6 @@ class StorePageRequest extends FormRequest
         return [
             'title' => 'required',
             'content' => 'required',
-            'urlPath' => 'required',
         ];
     }
 }

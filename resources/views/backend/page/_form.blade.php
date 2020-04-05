@@ -1,18 +1,17 @@
-
 <div class="card">
     <div class="card-body">
         <div class="row">
             <div class="col-md">
                 <div class="form-group">
                     {{ Form::label('title', 'Titre de la page') }}
-                    {{ Form::text('title', null, ['class' => 'form-control']) }}
+                    {{ Form::text('title', null, ['class' => 'form-control', 'required']) }}
                     {!! $errors->first('title', '<span class="text-danger">:message</span>') !!}
                 </div>
             </div>
             <div class="col-md">
                 <div class="form-group">
                     {{ Form::label('urlPath', 'URL') }}
-                    {{ Form::text('urlPath', null, ['class' => 'form-control']) }}
+                    {{ Form::text('urlPath', null, ['class' => 'form-control', (!isset($page) || $page->id != 1) ? 'required' : '']) }}
                     {!! $errors->first('urlPath', '<span class="text-danger">:message</span>') !!}
                 </div>
             </div>

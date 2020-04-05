@@ -6,8 +6,10 @@ use App\Events\Frontend\Auth\UserLoggedIn;
 use App\Events\Frontend\Auth\UserLoggedOut;
 use App\Exceptions\GeneralException;
 use App\Http\Controllers\Controller;
+use App\Models\Auth\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use LangleyFoxall\LaravelNISTPasswordRules\PasswordRules;
 
 /**
@@ -41,6 +43,16 @@ class LoginController extends Controller
     public function showAdminLoginForm()
     {
         return view('frontend.auth.admin');
+    }
+
+    public function checkFrontendPassword(Request $request)
+    {
+        $user = User::where('email', config('auth.frontend_email_account'))->first();
+        $isPasswordCorrect = Hash::check($request->password, $user->password);
+
+        return [
+            'isPasswordCorrect' => $isPasswordCorrect,
+        ];
     }
 
     /**
