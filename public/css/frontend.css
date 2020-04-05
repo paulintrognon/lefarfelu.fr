@@ -6255,6 +6255,13 @@ a.btn:hover {
   cursor: pointer;
 }
 
+.Page-header-couverture {
+  padding: 15rem 0;
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .header {
   box-shadow: 0 2px 0 0 whitesmoke;
 }
@@ -6485,7 +6492,7 @@ a.btn:hover {
 }
 
 .Inscriptions-Header {
-  padding: 25vh 0;
+  padding: 15rem 0;
   background-image: url("/img/frontend/inscriptions-bg.jpg");
   background-position: bottom center;
   background-size: cover;
