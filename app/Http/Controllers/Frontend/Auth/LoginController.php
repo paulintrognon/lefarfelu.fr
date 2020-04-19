@@ -121,6 +121,10 @@ class LoginController extends Controller
             auth()->logoutOtherDevices($request->password);
         }
 
+        $user = auth()->guard('web')->user();
+        if ($user->isAdmin()) {
+            return redirect()->route('admin.dashboard');
+        }
         return redirect()->intended($this->redirectPath());
     }
 

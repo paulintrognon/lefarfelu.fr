@@ -34,7 +34,7 @@ Route::group(['namespace' => 'Auth', 'as' => 'auth.'], function () {
         // Authentication Routes
         Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
         Route::post('login', [LoginController::class, 'login'])->name('login.post');
-        Route::get('admin-login', [LoginController::class, 'showAdminLoginForm'])->name('login.admin');
+        Route::get('login-admin', [LoginController::class, 'showAdminLoginForm'])->name('login.admin');
         Route::post('check-password', [LoginController::class, 'checkFrontendPassword'])->name('login.check-password');
 
         // Socialite Routes
