@@ -1,7 +1,13 @@
  @if($errors->any())
     <div class="message is-danger alert alert-danger" role="alert">
         <div class="message-header">
-            <p>Erreur</p>
+            <p>
+            @if ($errors->has('email'))
+                Mot de passe invalide
+            @else
+                Erreur
+            @endif
+            </p>
             <button type="button" class="delete close" data-dismiss="alert" aria-label="delete"></button>
         </div>
 

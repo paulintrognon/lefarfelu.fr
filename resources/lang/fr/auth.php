@@ -12,7 +12,7 @@ return [
     |
     */
 
-    'failed' => 'Ces informations de connexion ne correspondent pas.',
+    'failed' => 'Le mot de passe saisi n\'est pas le bon, essayez à nouveau.',
     'general_error' => "Vous n'avez pas les droits requis pour cette action.",
     'password_used' => 'Vous ne pouvez pas utiliser un mot de passe que vous avez déjà utilisé',
     'socialite' => [
