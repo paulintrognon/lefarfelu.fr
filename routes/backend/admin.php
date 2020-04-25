@@ -18,6 +18,8 @@ Route::post('pages/store', [PageController::class, 'store'])->name('page.store')
 Route::get('pages/{page}/edit', [PageController::class, 'edit'])->name('page.edit');
 Route::post('pages/{page}/update', [PageController::class, 'update'])->name('page.update');
 Route::get('pages/{page}/history', [PageHistoryController::class, 'list'])->name('page.history');
+Route::get('pages/{page}/history/{history}/preview', [PageHistoryController::class, 'preview'])->name('page.history.preview');
+Route::post('pages/{page}/history/{history}/restore', [PageHistoryController::class, 'restore'])->name('page.history.restore');
 
 // Fichiers
 Route::get('files', [FileController::class, 'list'])->name('file.list');

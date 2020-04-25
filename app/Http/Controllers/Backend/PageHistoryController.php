@@ -24,4 +24,23 @@ class PageHistoryController extends Controller
             'histories' => $histories,
         ]);
     }
+
+    public function preview(Page $page, PageHistory $history)
+    {
+        return view('backend.page.preview', [
+            'page' => $page,
+            'history' => $history,
+        ]);
+    }
+
+    /**
+     * Replace the active page content by the content of given $history
+     */
+    public function restore(Page $page, PageHistory $history)
+    {
+        $page->update([
+            'content' => $history->content,
+        ]);
+        return redirect()->route('admin.page.edit', $page)->withFlashSuccess('Page restaurée !');;
+    }
 }

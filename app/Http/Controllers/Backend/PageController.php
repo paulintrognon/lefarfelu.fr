@@ -71,7 +71,14 @@ class PageController extends Controller
     {
         $user = auth()->guard('web')->user();
 
-        // Store current page in page history to save it
+        // Save new page
+        $page->title = $request->title;
+        $page->urlPath = $request->urlPath ?? '';
+        $page->content = $request->content;
+        $page->lastEditBy()->associate($user);
+        $page->save();
+
+        // Save the new page in history
         $pageHistory = new PageHistory([
             'title' => $page->title,
             'urlPath' => $page->urlPath,
@@ -80,13 +87,6 @@ class PageController extends Controller
         $pageHistory->editedBy()->associate($page->lastEditBy);
         $pageHistory->page()->associate($page);
         $pageHistory->save();
-
-        // Save new page
-        $page->title = $request->title;
-        $page->urlPath = $request->urlPath ?? '';
-        $page->content = $request->content;
-        $page->lastEditBy()->associate($user);
-        $page->save();
 
         return redirect()
             ->route('admin.page.edit', $page)
