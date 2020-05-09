@@ -29,3 +29,7 @@ output.txt
 coverage.xml
 /coverage
 .phpunit.result.cache
+
+public/css/*.css
+public/js/*.js
+public/js/*.js.LICENSE
