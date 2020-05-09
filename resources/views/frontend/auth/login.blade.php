@@ -19,7 +19,6 @@
     <div class="LoginPage-form">
         <form action="{{ route('frontend.auth.login.post') }}" method="POST" id="LoginPage-form-form">
             <input type="hidden" name="email" value="{{ config('auth.frontend_email_account') }}" />
-            <input type="hidden" name="remember" value="1" />
             @csrf
             <div class="LoginPage-form-input-container">
                 <div>

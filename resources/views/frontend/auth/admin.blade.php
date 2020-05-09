@@ -24,7 +24,6 @@
     <div class="LoginPage-form">
         <form action="{{ route('frontend.auth.login.post') }}" method="POST">
             @csrf
-            <input type="hidden" name="remember" value="1" />
             <div class="LoginPage-form-input-container">
                 <input type="email" name="email" required placeholder="Entrez l'adresse email admin" class="LoginPage-form-input" />
             </div>
