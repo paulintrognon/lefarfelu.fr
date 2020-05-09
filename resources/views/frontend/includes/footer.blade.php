@@ -7,6 +7,6 @@
         Contactez Claire, Nanon ou Hélène par email à <span class="has-text-primary">campfarfelu@gmail.com</span>
     </div>
     <p>
-        <a href="{{ route('logout') }}">Déconnexion</a>
+        <a class="Footer-link" href="{{ route('frontend.auth.logout') }}">Me déconnecter</a>
     </p>
 </footer>
