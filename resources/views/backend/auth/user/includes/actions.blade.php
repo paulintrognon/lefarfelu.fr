@@ -19,8 +19,8 @@
         </a>
 
         <div class="btn-group btn-group-sm" role="group">
-            <button id="userActions" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                @lang('labels.general.more')
+            <button id="userActions" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Plus d'actions
             </button>
             <div class="dropdown-menu" aria-labelledby="userActions">
                 @if ($user->id !== auth()->id())

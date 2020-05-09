@@ -47,7 +47,7 @@ return [
      */
 
     'route' => [
-        'enabled' => true,
+        'enabled' => false,
 
         'attributes' => [
             'prefix' => 'admin/log-viewer',

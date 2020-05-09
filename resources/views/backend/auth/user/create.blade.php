@@ -104,19 +104,6 @@
                             </div><!--col-->
                         </div><!--form-group-->
 
-                        @if(! config('access.users.requires_approval'))
-                            <div class="form-group row">
-                                {{ html()->label(__('validation.attributes.backend.access.users.send_confirmation_email') . '<br/>' . '<small>' .  __('strings.backend.access.users.if_confirmed_off') . '</small>')->class('col-md-2 form-control-label')->for('confirmation_email') }}
-
-                                <div class="col-md-10">
-                                    <label class="switch switch-label switch-pill switch-primary">
-                                        {{ html()->checkbox('confirmation_email')->class('switch-input') }}
-                                        <span class="switch-slider" data-checked="yes" data-unchecked="no"></span>
-                                    </label>
-                                </div><!--col-->
-                            </div><!--form-group-->
-                        @endif
-
                         <div class="form-group row">
                             {{ html()->label(__('labels.backend.access.users.table.abilities'))->class('col-md-2 form-control-label') }}
 

@@ -3,7 +3,9 @@
 @section('body')
 <div class="LoginPage">
     <div>
-        <img src="/img/logo.png" alt="Logo" class="LoginPage-logo" />
+        <a href="/">
+            <img src="/img/logo.png" alt="Logo" class="LoginPage-logo" />
+        </a>
     </div>
     <div class="LoginPage-text">
         <p class="-blue">
