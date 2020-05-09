@@ -49,6 +49,14 @@
     }
 }
 
+.LoginPage-form-hide-password {
+    border: none;
+    background: none;
+    color: $primary;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .LoginPage-form-submit-container {
     margin: 2rem 0;
 }

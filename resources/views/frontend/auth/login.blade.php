@@ -22,13 +22,20 @@
             <input type="hidden" name="remember" value="1" />
             @csrf
             <div class="LoginPage-form-input-container">
-                <input type="password" name="password" required placeholder="Entrez le mot de passe" class="LoginPage-form-input" id="LoginPage-form-input-password" />
+                <div>
+                    <input type="text" name="password" required placeholder="Entrez le mot de passe" class="LoginPage-form-input" id="LoginPage-form-input-password" />
+                </div>
+                <div>
+                    <button type="button" id="LoginPage-form-hide-password" class="LoginPage-form-hide-password">
+                        Cacher le mot de passe
+                    </button>
+                </div>
             </div>
             <div class="LoginPage-form-submit-container">
                 <button class="LoginPage-form-submit" type="submit">C'est parti !</button>
             </div>
             <p class="LoginPage-form-forgotPassword">
-                Mot de passe oublié&nbsp;? Contactez <em>aidez-moi@lefarfelu.fr</em>
+                Mot de passe oublié&nbsp;? Contactez <em>aide@campfarfelu.fr</em>
             </p>
         </form>
     </div>
@@ -46,18 +53,35 @@
 document.addEventListener("DOMContentLoaded", function() {
     const formElement = document.getElementById('LoginPage-form-form');
     const audio = new Audio('/sounds/a-table.mp3');
+    const $passwordInput = $('#LoginPage-form-input-password');
+    const $togglePasswordVisibilityBtn = $('#LoginPage-form-hide-password');
 
     formElement.addEventListener('submit', onSubmit, true);
 
+    $togglePasswordVisibilityBtn.click(function () {
+        if ($passwordInput.attr('type') === 'text') {
+            $passwordInput.attr('type', 'password');
+            $togglePasswordVisibilityBtn.text('Afficher le mot de passe');
+        } else {
+            $passwordInput.attr('type', 'text');
+            $togglePasswordVisibilityBtn.text('Cacher le mot de passe');
+        }
+    });
+
     function onSubmit(event) {
         event.preventDefault();
+
+        let isInputTypeText = $passwordInput.attr('type') === 'text';
+        if (isInputTypeText) {
+            $passwordInput.attr('type', 'password');
+        }
 
         $.ajax({
             type: "POST",
             url: '{{ route('frontend.auth.login.check-password') }}',
             data: {
                 _token: "{{ csrf_token() }}",
-                password: $('#LoginPage-form-input-password').val(),
+                password: $passwordInput.val(),
             },
             success: function (data) {
                 if (data.isPasswordCorrect) {
@@ -72,6 +96,11 @@ document.addEventListener("DOMContentLoaded", function() {
             error: function(data) {
                 submitForm();
             },
+            complete: function () {
+                if (isInputTypeText) {
+                    $passwordInput.attr('type', 'text');
+                }
+            }
         });
     }
 

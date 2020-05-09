@@ -6360,6 +6360,14 @@ a.btn:hover {
   color: #3a69a3;
 }
 
+.LoginPage-form-hide-password {
+  border: none;
+  background: none;
+  color: #4f82c1;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .LoginPage-form-submit-container {
   margin: 2rem 0;
 }

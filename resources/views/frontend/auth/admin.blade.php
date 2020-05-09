@@ -27,13 +27,13 @@
                 <input type="email" name="email" required placeholder="Entrez l'adresse email admin" class="LoginPage-form-input" />
             </div>
             <div class="LoginPage-form-input-container">
-                <input type="password" name="password" required placeholder="Entrez le mot de passe" class="LoginPage-form-input" />
+                <input type="password" name="password" required placeholder="Entrez le mot de passe" class="LoginPage-form-input" />                
             </div>
             <div class="LoginPage-form-submit-container">
                 <button class="LoginPage-form-submit" type="submit">C'est parti !</button>
             </div>
             <p class="LoginPage-form-forgotPassword">
-                Problème de connexion&nbsp;? Contactez <em>aidez-moi@lefarfelu.fr</em>
+                Problème de connexion&nbsp;? Contactez <em>aide@campfarfelu.fr</em>
             </p>
         </form>
     </div>
